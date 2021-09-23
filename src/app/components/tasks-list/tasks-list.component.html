@@ -1,5 +1,7 @@
 <app-tasks-add (taskAdded)="addTask($event)"></app-tasks-add>
 
-<div class="container">
-  <app-tasks *ngFor="let task of tasks" [task]="task"></app-tasks>
-</div>
+<mat-card-content>
+  <app-tasks  *ngFor="let task of tasks" [task]="task"></app-tasks>
+</mat-card-content>
+
+

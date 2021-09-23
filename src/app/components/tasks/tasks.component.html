@@ -1,13 +1,25 @@
-<div>
-  <div class="card">
-    <div class="card-header">
-      <h2> {{task.title}} </h2>
-      <div class="float-right">
-
+<div >
+  <mat-card>
+    <mat-card-header>
+      <h2>{{ task.title }}</h2>
+      <div class="layout-row layout-align-end-start">
+        <button
+        class="botton"
+          mat-raised-button
+          color="accent"
+          (click)="task.hide = !task.hide">
+          {{ task.hide ? "Show" : "Hide" }}
+        </button>
+        <button class="botton" mat-raised-button color="warn" (click)="removeTask(task)">
+          Remove
+        </button>
       </div>
-    </div>
-    <div class="card-body" [hidden]="task.hide">
-      <p> {{task.description}} </p>
-    </div>
-  </div>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div [hidden]="task.hide">
+        <p>{{ task.description }}</p>
+      </div>
+    </mat-card-content>
+  </mat-card>
 </div>

@@ -6,6 +6,9 @@ import { Task } from '../models/task';
   providedIn: 'root',
 })
 export class DataService {
+  removeTask(tasks: Task) {
+    throw new Error('Method not implemented.');
+  }
   tasks: Task[];
 
   constructor() {
